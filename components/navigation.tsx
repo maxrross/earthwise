@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Cloud, GamepadIcon, Home, BookOpen } from "lucide-react";
+import { Cloud, GamepadIcon, Home, BookOpen, Child } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Navigation() {
@@ -17,6 +17,7 @@ export default function Navigation() {
     { href: "/lessons", label: "Lessons", icon: BookOpen, color: "text-blue-500" },
     { href: "/games", label: "Games", icon: GamepadIcon, color: "text-green-500" },
     { href: "/calming-corner", label: "Relax", icon: Cloud, color: "text-purple-500" },
+    { href: "/kids", label: "Kids", icon: Child, color: "text-yellow-500" },
   ];
 
   return (

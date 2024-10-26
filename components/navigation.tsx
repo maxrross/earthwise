@@ -13,7 +13,8 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const routes = [
-    { href: "/kids", label: "Home", icon: Home, color: "text-pink-500" },
+    { href: "/", label: "Home", icon: Home, color: "text-pink-500" },
+    { href: "/kids", label: "Kids Home", icon: Home, color: "text-pink-500" },
     { href: "/kids/lessons", label: "Lessons", icon: BookOpen, color: "text-blue-500" },
     { href: "/kids/games", label: "Games", icon: GamepadIcon, color: "text-green-500" },
     { href: "/kids/calming-corner", label: "Relax", icon: Cloud, color: "text-purple-500" },

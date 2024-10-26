@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Cloud, GamepadIcon, Home, Music, BookOpen } from "lucide-react";
+import { Cloud, GamepadIcon, Home, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Navigation() {
@@ -21,7 +21,7 @@ export default function Navigation() {
 
   return (
     <div className="sticky top-0 z-50 w-full border-b-4 border-primary/20 bg-background/95 backdrop-blur bg-background/60">
-      <div className="container flex h-16 items-center">
+      <div className="container flex h-16 items-center mx-auto">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Cloud className="h-8 w-8 animate-bounce text-primary" />
@@ -29,7 +29,7 @@ export default function Navigation() {
               EarthWise Kids
             </span>
           </Link>
-          <nav className="flex items-center space-x-6 text-lg font-medium">
+          <div className="flex items-center space-x-6 text-lg font-medium">
             {routes.map((route) => {
               const Icon = route.icon;
               return (
@@ -50,7 +50,7 @@ export default function Navigation() {
                 </Link>
               );
             })}
-          </nav>
+          </div>
         </div>
         <Button
           className="inline-flex items-center md:hidden"
@@ -62,26 +62,25 @@ export default function Navigation() {
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
-              d={isOpen ? "M6 strokeLinejoin="round"
               strokeWidth={2}
               d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
             />
           </svg>
         </Button>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <nav className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2">
             <ModeToggle />
-          </nav>
+          </div>
         </div>
       </div>
       {isOpen && (
         <div className="border-b-4 border-primary/20 bg-background md:hidden">
-          <nav className="flex flex-col space-y-4 p-4">
+          <div className="flex flex-col space-y-4 p-4">
             {routes.map((route) => {
               const Icon = route.icon;
               return (
@@ -103,7 +102,7 @@ export default function Navigation() {
                 </Link>
               );
             })}
-          </nav>
+          </div>
         </div>
       )}
     </div>

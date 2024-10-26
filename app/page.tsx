@@ -36,7 +36,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="container px-4 py-8 md:py-12">
+    <div className="mx-auto container px-4 py-8 md:py-12">
       <div className="text-center mb-12">
         <h1 className="text-5xl font-bold tracking-tight lg:text-6xl mb-6 rainbow-text">
           Welcome to EarthWise Kids!
